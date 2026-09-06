@@ -1,5 +1,5 @@
 // Verilog netlist produced by program LSE :  version Radiant Software (64-bit) 2026.1.0.37.0
-// Netlist written on Sun Sep  6 02:31:13 2026
+// Netlist written on Sun Sep  6 03:12:10 2026
 // Source file index table: 
 // Object locations will have the form @<file_index>(<first_ line>[<left_column>],<last_line>[<right_column>])
 // file 0 "c:/users/rkong/documents/github/e155-lab1/fpga/e155_lab1_rk/source/impl_1/counter.sv"
@@ -89,18 +89,44 @@
 
 module sevenseg (input [3:0]switch, output [6:0]segments_abc_defg);
     
-    wire GND_net;
+    wire [3:0]switch_c;
+    wire [6:0]segments_abc_defg_c;
     
-    wire VCC_net;
+    wire GND_net, VCC_net;
     
-    VHI i14 (.Z(VCC_net));
-    OB \segments_abc_defg_pad[0]  (.I(GND_net), .O(segments_abc_defg[0]));
-    OB \segments_abc_defg_pad[1]  (.I(GND_net), .O(segments_abc_defg[1]));
-    OB \segments_abc_defg_pad[2]  (.I(GND_net), .O(segments_abc_defg[2]));
-    OB \segments_abc_defg_pad[3]  (.I(GND_net), .O(segments_abc_defg[3]));
-    OB \segments_abc_defg_pad[4]  (.I(GND_net), .O(segments_abc_defg[4]));
-    OB \segments_abc_defg_pad[5]  (.I(GND_net), .O(segments_abc_defg[5]));
-    OB \segments_abc_defg_pad[6]  (.I(GND_net), .O(segments_abc_defg[6]));
-    VLO i6 (.Z(GND_net));
+    VHI i2 (.Z(VCC_net));
+    (* lut_function="(!(A (B (C (D)+!C !(D))+!B (C (D)))+!A (B (C+(D)))))" *) LUT4 segments_abc_defg_c_5__I_0_4_lut (.A(switch_c[0]), 
+            .B(switch_c[2]), .C(switch_c[3]), .D(switch_c[1]), .Z(segments_abc_defg_c[5]));
+    defparam segments_abc_defg_c_5__I_0_4_lut.INIT = "0x1bb7";
+    (* lut_function="(A (B+!(C (D)))+!A (B ((D)+!C)+!B (C)))" *) LUT4 switch_c_3__I_0_4_lut (.A(switch_c[1]), 
+            .B(switch_c[3]), .C(switch_c[2]), .D(switch_c[0]), .Z(segments_abc_defg_c[0]));
+    defparam switch_c_3__I_0_4_lut.INIT = "0xdebe";
+    (* lut_function="(A (B (C (D)+!C !(D))+!B (C+(D)))+!A (B+(C+!(D))))" *) LUT4 segments_abc_defg_c_6__I_0_4_lut (.A(switch_c[0]), 
+            .B(switch_c[3]), .C(switch_c[1]), .D(switch_c[2]), .Z(segments_abc_defg_c[6]));
+    defparam segments_abc_defg_c_6__I_0_4_lut.INIT = "0xf67d";
+    (* lut_function="(!(A (B (C)+!B !(C+(D)))+!A !(((D)+!C)+!B)))" *) LUT4 segments_abc_defg_c_4__I_0_4_lut (.A(switch_c[1]), 
+            .B(switch_c[3]), .C(switch_c[2]), .D(switch_c[0]), .Z(segments_abc_defg_c[4]));
+    defparam segments_abc_defg_c_4__I_0_4_lut.INIT = "0x7f3d";
+    (* lut_function="(A (B+!((D)+!C))+!A !(B (C (D))+!B !(C+!(D))))" *) LUT4 segments_abc_defg_c_1__I_0_4_lut (.A(switch_c[1]), 
+            .B(switch_c[3]), .C(switch_c[2]), .D(switch_c[0]), .Z(segments_abc_defg_c[1]));
+    defparam segments_abc_defg_c_1__I_0_4_lut.INIT = "0x9cfd";
+    VLO i177 (.Z(GND_net));
+    (* lut_function="(A (B (C+(D)))+!A (B+((D)+!C)))" *) LUT4 segments_abc_defg_c_2__I_0_4_lut (.A(switch_c[0]), 
+            .B(switch_c[3]), .C(switch_c[2]), .D(switch_c[1]), .Z(segments_abc_defg_c[2]));
+    defparam segments_abc_defg_c_2__I_0_4_lut.INIT = "0xddc5";
+    (* lut_function="(!(A (B (D)+!B !(D))+!A !(B ((D)+!C)+!B (C+!(D)))))" *) LUT4 segments_abc_defg_c_3__I_0_4_lut (.A(switch_c[0]), 
+            .B(switch_c[1]), .C(switch_c[3]), .D(switch_c[2]), .Z(segments_abc_defg_c[3]));
+    defparam segments_abc_defg_c_3__I_0_4_lut.INIT = "0x769d";
+    IB \switch_pad[3]  (.I(switch[3]), .O(switch_c[3]));
+    IB \switch_pad[2]  (.I(switch[2]), .O(switch_c[2]));
+    IB \switch_pad[1]  (.I(switch[1]), .O(switch_c[1]));
+    IB \switch_pad[0]  (.I(switch[0]), .O(switch_c[0]));
+    OB \segments_abc_defg_pad[6]  (.I(segments_abc_defg_c[6]), .O(segments_abc_defg[6]));
+    OB \segments_abc_defg_pad[5]  (.I(segments_abc_defg_c[5]), .O(segments_abc_defg[5]));
+    OB \segments_abc_defg_pad[4]  (.I(segments_abc_defg_c[4]), .O(segments_abc_defg[4]));
+    OB \segments_abc_defg_pad[3]  (.I(segments_abc_defg_c[3]), .O(segments_abc_defg[3]));
+    OB \segments_abc_defg_pad[2]  (.I(segments_abc_defg_c[2]), .O(segments_abc_defg[2]));
+    OB \segments_abc_defg_pad[1]  (.I(segments_abc_defg_c[1]), .O(segments_abc_defg[1]));
+    OB \segments_abc_defg_pad[0]  (.I(segments_abc_defg_c[0]), .O(segments_abc_defg[0]));
     
 endmodule

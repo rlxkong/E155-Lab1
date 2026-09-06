@@ -3,6 +3,6 @@ Report for cell sevenseg
    Instance path: sevenseg
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	          1        100.0
-                               LUTGATE	          1        100.0
-                                 IOBUF	          7        100.0
+                                  LUT4	          7        100.0
+                               LUTGATE	          7        100.0
+                                 IOBUF	         11        100.0
