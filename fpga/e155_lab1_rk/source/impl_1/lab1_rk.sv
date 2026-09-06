@@ -1,4 +1,4 @@
-module lab1_rk(
+ module lab1_rk(
 	 input   logic       reset, enable,
 	 input   logic [3:0] switch,
      output  logic [2:0] led,
@@ -8,7 +8,7 @@ module lab1_rk(
    logic int_osc;
 
    // Internal high-speed oscillator
-   HSOSC #(.CLKHF_DIV(2'b01))
+   HSOSC #(.CLKHF_DIV(2'b00))
          hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(int_osc));
 
   // Instantiate counter and seven segments

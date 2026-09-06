@@ -3,28 +3,16 @@ Report for cell lab1_rk
    Instance path: lab1_rk
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         45        100.0
-                               LUTGATE	         21        100.0
-                                LUTCCU	         24        100.0
-                                 IOBUF	         15        100.0
-                                PFUREG	         24        100.0
+                                  LUT4	         10        100.0
+                               LUTGATE	         10        100.0
+                                 IOBUF	         14        100.0
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
-                               counter	          1        77.8
-                              sevenseg	          1        15.6
+                              sevenseg	          1        70.0
 ---------------------------------------------------
 Report for cell sevenseg
    Instance path: lab1_rk/sevenseg
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	          7        15.6
-                               LUTGATE	          7        33.3
----------------------------------------------------
-Report for cell counter
-   Instance path: lab1_rk/counter
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	         35        77.8
-                               LUTGATE	         11        52.4
-                                LUTCCU	         24        100.0
-                                PFUREG	         24        100.0
+                                  LUT4	          7        70.0
+                               LUTGATE	          7        70.0

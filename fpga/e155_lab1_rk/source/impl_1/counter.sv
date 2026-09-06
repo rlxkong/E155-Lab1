@@ -11,7 +11,7 @@ module counter(
 		 counter <= 0;
 		 switch_led <= 0;
 		 end
-	 else if (counter == 5000000) begin
+	 else if (counter == 10000000) begin
 		 switch_led <= ~switch_led;
 		 counter <= 0;
 		 end
