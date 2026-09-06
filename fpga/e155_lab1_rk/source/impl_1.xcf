@@ -19,7 +19,7 @@
 				<BScanVal>0</BScanVal>
 			</Bypass>
 			<File>../../impl_1/e155_lab1_rk_impl_1.bin</File>
-			<FileTime>09/06/26 14:44:05</FileTime>
+			<FileTime>09/06/26 16:43:34</FileTime>
 			<JedecChecksum>0xFAC4</JedecChecksum>
 			<MemoryType>External SPI Flash Memory (SPI FLASH)</MemoryType>
 			<Operation>Erase,Program,Verify</Operation>

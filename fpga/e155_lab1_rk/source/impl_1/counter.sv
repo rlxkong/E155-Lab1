@@ -2,7 +2,7 @@ module counter(
 	input logic clk, enable, reset,
 	output logic led
 );
-	logic [22:0] counter;
+	logic [23:0] counter;
 	logic switch_led;
 	
    // Counter

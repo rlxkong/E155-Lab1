@@ -2,7 +2,6 @@
 -lib pmi -vhd "C:/lscc/radiant/2026.1/ip/pmi/pmi_iCE40UP.vhd"
 -sver "C:/Users/rkong/Documents/GitHub/E155-Lab1/fpga/e155_lab1_rk/source/impl_1/lab1_rk.sv" "C:/Users/rkong/Documents/GitHub/E155-Lab1/fpga/e155_lab1_rk/source/impl_1/counter.sv" "C:/Users/rkong/Documents/GitHub/E155-Lab1/fpga/e155_lab1_rk/source/impl_1/sevenseg.sv"
 -path "C:/Users/rkong/Documents/GitHub/E155-Lab1/fpga/e155_lab1_rk" "C:/Users/rkong/Documents/GitHub/E155-Lab1/fpga/e155_lab1_rk"
--top lab1_rk
 -isTop
 -a "iCE40UP"
 -t "iCE40UP5K"
