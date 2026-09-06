@@ -5,15 +5,14 @@ module counter(
 	logic [22:0] counter;
 	logic switch_led;
 	
-   // Initialize switch_led
-   assign switch_led = '0;
-   
    // Counter
    always_ff @(posedge clk) begin
-     if      (reset == 0)
-		 counter <=0;
+     if      (reset == 0) begin
+		 counter <= 0;
+		 switch_led <= 0;
+		 end
 	 else if (counter == 5000000) begin
-		 switch_led = ~switch_led;
+		 switch_led <= ~switch_led;
 		 counter <= 0;
 		 end
 	 else 

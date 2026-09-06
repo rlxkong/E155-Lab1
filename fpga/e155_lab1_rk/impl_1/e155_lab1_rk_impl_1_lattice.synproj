@@ -42,10 +42,8 @@
 # Source Files
 -sver "../source/impl_1/lab1_rk.sv"
 -sver "../source/impl_1/counter.sv"
--sver "../source/impl_1/switch_to_7_segment.sv"
 -sver "../source/impl_1/sevenseg.sv"
 -path ".."
--top sevenseg
 # Output Configuration
 -udb "e155_lab1_rk_impl_1_rtl.udb"
 -output_hdl "e155_lab1_rk_impl_1.vm"
