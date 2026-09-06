@@ -14,5 +14,9 @@ module lab1_rk(
   // Instantiate counter and seven segments
   counter counter(int_osc, enable, reset, led[2]);
   sevenseg sevenseg(switch, seg);
+  
+  // LED switch logic
+  assign led[0] = switch[1] ^ switch[0];
+  assign led[1] = switch[3] & switch[2]; 
 
 endmodule

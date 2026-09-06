@@ -8,18 +8,18 @@ I/O cells:      15
                             FD1P3XZ        24          100.0
                          HSOSC_CORE         1          100.0
                                  IB         5          100.0
-                               LUT4        18          100.0
+                               LUT4        20          100.0
                                  OB        10          100.0
 SUB MODULES
                             counter         1
                            sevenseg         1
-                              TOTAL        72
+                              TOTAL        74
 ----------------------------------------------------------------------
 Report for cell sevenseg.v1
 Instance Path : sevenseg
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               LUT4         7           38.9
+                               LUT4         7           35.0
                               TOTAL         7
 ----------------------------------------------------------------------
 Report for cell counter.v1
@@ -28,5 +28,5 @@ Instance Path : counter
                                cell     count   Res Usage(%)
                                 FA2        12          100.0
                             FD1P3XZ        24          100.0
-                               LUT4        11           61.1
+                               LUT4        11           55.0
                               TOTAL        47
