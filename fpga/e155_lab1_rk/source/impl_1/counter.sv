@@ -1,14 +1,26 @@
 module counter(
-	input logic clk, reset,
-	output logic [2:0] led
+	input logic clk, enable, reset,
+	output logic led
 );
+	logic [22:0] counter;
+	logic switch_led;
+	
+   // Initialize switch_led
+   assign switch_led = '0;
+   
    // Counter
-   always_ff @(posedge int_osc) begin
-     if(reset == 0)  counter <= 0;
-     else            counter <= counter + 1;
+   always_ff @(posedge clk) begin
+     if      (reset == 0)
+		 counter <=0;
+	 else if (counter == 5000000) begin
+		 switch_led = ~switch_led;
+		 counter <= 0;
+		 end
+	 else 
+		 counter <= counter + 1;
    end
-
-   // Assign LED output
-   assign led = counter[24];
+   
+   // Assign led  
+   assign led = switch_led;
 	
 endmodule

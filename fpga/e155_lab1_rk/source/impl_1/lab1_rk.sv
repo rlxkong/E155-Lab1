@@ -1,5 +1,5 @@
 module lab1_rk(
-	 input   logic [3:0] s,
+	 input   logic [3:0] switch,
      output  logic [2:0] led,
 	 output  logic [6:0] seg
 );
