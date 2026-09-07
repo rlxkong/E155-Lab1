@@ -6,7 +6,7 @@ Performance Grade:      High-Performance_1.2V
 PACKAGE:          SG48
 Package Status:                     Preliminary    Version 1.5
 
-Sun Sep  6 23:46:16 2026
+Mon Sep  7 02:22:50 2026
 
 Pinout by Port Name:
 +-----------+----------+--------------+-------+------------------------------------------+
@@ -15,7 +15,6 @@ Pinout by Port Name:
 | led[0]    | 42/0     | LVCMOS33_OUT | PR9A  | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
 | led[1]    | 38/0     | LVCMOS33_OUT | PR9B  | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
 | led[2]    | 28/0     | LVCMOS33_OUT | PR18A | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
-| reset     | 34/0     | LVCMOS33_IN  | PR14B | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
 | seg[0]    | 46/2     | LVCMOS33_OUT | PL6A  | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
 | seg[1]    | 45/2     | LVCMOS33_OUT | PL8B  | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
 | seg[2]    | 3/2      | LVCMOS33_OUT | PL10B | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
@@ -66,7 +65,7 @@ Pinout by Pin Number:
 | 28/0     | led[2]              | LOCATED    | LVCMOS33_OUT | PR18A |                  |
 | 31/0     | switch[1]           | LOCATED    | LVCMOS33_IN  | PR17B |                  |
 | 32/0     | switch[3]           | LOCATED    | LVCMOS33_IN  | PR17A |                  |
-| 34/0     | reset               | LOCATED    | LVCMOS33_IN  | PR14B |                  |
+| 34/0     |     unused, PULL:UP |            |              | PR14B |                  |
 | 35/0     | switch[2]           | LOCATED    | LVCMOS33_IN  | PR13B | GPLL_IN/PCLKT0_1 |
 | 36/0     |     unused, PULL:UP |            |              | PR10B |                  |
 | 37/0     | switch[0]           | LOCATED    | LVCMOS33_IN  | PR14A | PCLKT0_0         |
@@ -106,7 +105,6 @@ Locate Constraints for each Pin:
 ldc_set_location -site {42} [ get_ports {led[0]} ]
 ldc_set_location -site {38} [ get_ports {led[1]} ]
 ldc_set_location -site {28} [ get_ports {led[2]} ]
-ldc_set_location -site {34} [ get_ports {reset} ]
 ldc_set_location -site {46} [ get_ports {seg[0]} ]
 ldc_set_location -site {45} [ get_ports {seg[1]} ]
 ldc_set_location -site {3} [ get_ports {seg[2]} ]
@@ -125,5 +123,5 @@ ldc_set_location -site {32} [ get_ports {switch[3]} ]
 
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
 
-Sun Sep  6 23:46:16 2026
+Mon Sep  7 02:22:50 2026
 

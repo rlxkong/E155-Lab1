@@ -10,16 +10,20 @@ module counter #(
 	
    // Counter
    always_ff @(posedge clk) begin
-     if      (reset == 0) begin
+     if      (reset == 0) begin		// when reset == 0 it resets
 		 counter <= 0;
 		 switch_led <= 0;
 		 end
-	 else if (counter == maxcount) begin
+	 else if (enable == 0) 
+		 counter <= counter; 		// when enable == 0 it stops the flip-flop
+	 else if ((counter == maxcount) & (enable == 1)) begin
 		 switch_led <= ~switch_led;
 		 counter <= 0;
 		 end
-	 else 
-		 counter <= counter + 1;
+	 else begin
+		 if  (enable == 1)
+			counter <= counter + 1;
+			end
    end
    
    // Assign led  
