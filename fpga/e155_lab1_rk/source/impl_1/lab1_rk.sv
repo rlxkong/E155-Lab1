@@ -13,7 +13,7 @@
          hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(int_osc));
 
   // Instantiate counter and seven segments
-  counter counter(int_osc, 0, reset, led[2]);
+  counter counter(int_osc, 1, reset, led[2]);
   sevenseg sevenseg(switch, seg);
   
   // LED switch logic

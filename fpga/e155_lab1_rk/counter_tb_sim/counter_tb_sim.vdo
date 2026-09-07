@@ -1,0 +1,1 @@
+qrun -clean -f "C:/Users/rkong/Documents/GitHub/E155-Lab1/fpga/e155_lab1_rk/counter_tb_sim/counter_tb_sim.f"
