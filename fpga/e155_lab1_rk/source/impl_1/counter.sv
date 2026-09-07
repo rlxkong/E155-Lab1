@@ -1,8 +1,11 @@
-module counter(
+module counter #(
+	parameter maxcount = 10000000, //maximum postitive edges to achieve 2.4 Hz
+	parameter N = 23 //sets bitsize of counter
+) (
 	input logic clk, enable, reset,
 	output logic led
 );
-	logic [23:0] counter;
+	logic [N:0] counter;
 	logic switch_led;
 	
    // Counter
@@ -11,7 +14,7 @@ module counter(
 		 counter <= 0;
 		 switch_led <= 0;
 		 end
-	 else if (counter == 10000000) begin
+	 else if (counter == maxcount) begin
 		 switch_led <= ~switch_led;
 		 counter <= 0;
 		 end

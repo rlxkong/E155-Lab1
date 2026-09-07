@@ -1,5 +1,5 @@
 // Verilog netlist produced by program LSE :  version Radiant Software (64-bit) 2026.1.0.37.0
-// Netlist written on Sun Sep  6 22:50:40 2026
+// Netlist written on Sun Sep  6 23:46:02 2026
 // Source file index table: 
 // Object locations will have the form @<file_index>(<first_ line>[<left_column>],<last_line>[<right_column>])
 // file 0 "c:/users/rkong/documents/github/e155-lab1/fpga/e155_lab1_rk/source/impl_1/counter.sv"
@@ -122,8 +122,8 @@ module lab1_rk (input reset, input enable, input [3:0]switch, output [2:0]led,
     OB \seg_pad[2]  (.I(seg_c[2]), .O(seg[2]));
     OB \seg_pad[1]  (.I(seg_c[1]), .O(seg[1]));
     OB \seg_pad[0]  (.I(seg_c[0]), .O(seg[0]));
-    (* LSE_LINE_FILE_ID=26, LSE_LCOL=12, LSE_RCOL=33, LSE_LLINE=17, LSE_RLINE=17 *) sevenseg sevenseg ({seg_c}, 
-            {switch_c});
+    (* LSE_LINE_FILE_ID=26, LSE_LCOL=12, LSE_RCOL=33, LSE_LLINE=17, LSE_RLINE=17 *) sevenseg sevenseg ({switch_c}, 
+            {seg_c});
     (* syn_instantiated=1 *) HSOSC_CORE hf_osc (.CLKHFPU(VCC_net), .CLKHFEN(VCC_net), 
             .TRIM9(GND_net), .TRIM8(GND_net), .TRIM7(GND_net), .TRIM6(GND_net), 
             .TRIM5(GND_net), .TRIM4(GND_net), .TRIM3(GND_net), .TRIM2(GND_net), 
@@ -142,13 +142,13 @@ module counter (output \led_c[2] , input int_osc, input reset_c);
     wire [23:0]counter;
     (* is_clock=1 *) wire int_osc;
     
-    wire GND_net, VCC_net, n14, n111, n182;
+    wire GND_net, VCC_net;
     wire [23:0]n101;
     
-    wire n20, n665, n356, n656, n109, n194, n662, n180, n192, 
-        n650, n184, n28, n190, n659, n186, n25, n188, n172, 
-        n653, n176, n21, n647, n644, n26, n27, n277, n178, 
-        n641, n638, n174, n635, n632, n629;
+    wire n656, n356, n111, n20, n632, n653, n14, n109, n194, 
+        n665, n186, n180, n192, n662, n21, n190, n659, n182, 
+        n188, n638, n28, n635, n184, n650, n647, n176, n644, 
+        n178, n26, n27, n25, n277, n641, n172, n174, n629;
     
     (* syn_use_carry_chain=1 *) FD1P3XZ counter_14__i23 (.D(n101[23]), .SP(VCC_net), 
             .CK(int_osc), .SR(n21), .Q(counter[23]));
@@ -367,7 +367,7 @@ endmodule
 // Verilog Description of module sevenseg
 //
 
-module sevenseg (output [6:0]seg_c, input [3:0]switch_c);
+module sevenseg (input [3:0]switch_c, output [6:0]seg_c);
     
     
     (* lut_function="(!(A (B+(C+!(D)))+!A !(B (C (D))+!B !(C))))" *) LUT4 seg_c_4__I_0_4_lut (.A(switch_c[1]), 
