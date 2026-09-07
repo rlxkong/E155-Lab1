@@ -15,13 +15,6 @@ SUB MODULES
                            sevenseg         1
                               TOTAL        76
 ----------------------------------------------------------------------
-Report for cell sevenseg.v1
-Instance Path : sevenseg
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               LUT4         7           35.0
-                              TOTAL         7
-----------------------------------------------------------------------
 Report for cell counter.v1
 Instance Path : counter
                                   Cell usage:
@@ -30,3 +23,10 @@ Instance Path : counter
                             FD1P3XZ        25          100.0
                                LUT4        11           55.0
                               TOTAL        49
+----------------------------------------------------------------------
+Report for cell sevenseg.v1
+Instance Path : sevenseg
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         7           35.0
+                              TOTAL         7

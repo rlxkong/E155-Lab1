@@ -6,6 +6,7 @@
 );
 
    logic int_osc;
+   logic [3:0] s;
 
    // Internal high-speed oscillator
    HSOSC #(.CLKHF_DIV(2'b00))
@@ -16,7 +17,8 @@
   sevenseg sevenseg(switch, seg);
   
   // LED switch logic
-  assign led[0] = switch[1] ^ switch[0];
-  assign led[1] = switch[3] & switch[2]; 
+  assign s = ~switch;
+  assign led[0] = s[1] ^ s[0];
+  assign led[1] = s[3] & s[2]; 
 
 endmodule

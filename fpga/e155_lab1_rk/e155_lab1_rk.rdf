@@ -12,6 +12,9 @@
         <Source name="source/impl_1/sevenseg.sv" type="Verilog" type_short="Verilog">
             <Options VerilogStandard="System Verilog"/>
         </Source>
+        <Source name="source/impl_1.xcf" type="Programming Project File" type_short="Programming">
+            <Options/>
+        </Source>
         <Source name="testing_pin_assignment.pdc" type="Physical Constraints File" type_short="PDC">
             <Options/>
         </Source>
