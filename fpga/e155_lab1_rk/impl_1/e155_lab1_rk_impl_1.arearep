@@ -1,19 +1,19 @@
 ----------------------------------------------------------------------
 Report for cell lab1_rk.TECH
 Register bits:  25 of 5280 (0.473%)
-I/O cells:      15
+I/O cells:      16
                                   Cell usage:
                                cell     count   Res Usage(%)
                                CCU2        13          100.0
                             FD1P3XZ        25          100.0
                          HSOSC_CORE         1          100.0
-                                 IB         5          100.0
-                               LUT4        20          100.0
+                                 IB         6          100.0
+                               LUT4        44          100.0
                                  OB        10          100.0
 SUB MODULES
                             counter         1
                            sevenseg         1
-                              TOTAL        76
+                              TOTAL       101
 ----------------------------------------------------------------------
 Report for cell counter.v1
 Instance Path : counter
@@ -21,12 +21,12 @@ Instance Path : counter
                                cell     count   Res Usage(%)
                                 FA2        13          100.0
                             FD1P3XZ        25          100.0
-                               LUT4        11           55.0
-                              TOTAL        49
+                               LUT4        34           77.3
+                              TOTAL        72
 ----------------------------------------------------------------------
 Report for cell sevenseg.v1
 Instance Path : sevenseg
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               LUT4         7           35.0
+                               LUT4         7           15.9
                               TOTAL         7

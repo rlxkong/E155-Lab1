@@ -1,7 +1,6 @@
 `timescale 1 ns/1 ns
 
 module sevenseg_tb();
-  logic   		  clk;	  // system clock
   logic   [3:0]   s; 	  // 4-bit input switches
   logic   [6:0]   seg;    // 6 output segments
 
@@ -9,12 +8,6 @@ module sevenseg_tb();
         .switch(s),
         .segments_abc_defg(seg)
     );
-
-  // generate clock
-  always begin
-      clk = 0; #5;
-      clk = 1; #5;
-  end
 
   // apply stimuli and check outputs
   initial begin

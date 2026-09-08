@@ -25,7 +25,7 @@ module counter_tb();
     reset = 0;
     #20; 			// initial set all values to 0
 	reset = 1; 
-	#20; 			// resume the code
+	#20; 			// resume the code (one cycle)
 
 	// enable verification
 		enable = 0;								// set enable to 0 should freeze the code
@@ -36,7 +36,7 @@ module counter_tb();
             $error("FAILED! The enable behaves incorrectly at time: %0t.", $time);
 			
 		enable = 1;
-		#200;			// wait a cycle for enable to occur (counter goes to 0)
+		#200;			// wait a cycle for enable to occur (continue counting)
 		assert (dut.count != 0)    
             $display("PASSED! The enable behaves as desired at time: %0t.", $time);
         else 

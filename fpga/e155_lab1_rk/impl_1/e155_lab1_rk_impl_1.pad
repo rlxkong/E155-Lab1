@@ -6,12 +6,13 @@ Performance Grade:      High-Performance_1.2V
 PACKAGE:          SG48
 Package Status:                     Preliminary    Version 1.5
 
-Mon Sep  7 05:20:11 2026
+Tue Sep  8 01:41:35 2026
 
 Pinout by Port Name:
 +-----------+----------+--------------+-------+------------------------------------------+
 | Port Name | Pin/Bank | Buffer Type  | Site  | Properties                               |
 +-----------+----------+--------------+-------+------------------------------------------+
+| enable    | 43/0     | LVCMOS33_IN  | PR10A | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
 | led[0]    | 42/0     | LVCMOS33_OUT | PR9A  | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
 | led[1]    | 38/0     | LVCMOS33_OUT | PR9B  | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
 | led[2]    | 28/0     | LVCMOS33_OUT | PR18A | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
@@ -75,7 +76,7 @@ Pinout by Pin Number:
 | 40/0     |                     |            |              | PR6A  | RGB1             |
 | 41/0     |                     |            |              | PR7A  | RGB2             |
 | 42/0     | led[0]              | LOCATED    | LVCMOS33_OUT | PR9A  |                  |
-| 43/0     |     unused, PULL:UP |            |              | PR10A |                  |
+| 43/0     | enable              | LOCATED    | LVCMOS33_IN  | PR10A |                  |
 | 44/2     | seg[3]              | LOCATED    | LVCMOS33_OUT | PL7B  | PCLKT2_0         |
 | 45/2     | seg[1]              | LOCATED    | LVCMOS33_OUT | PL8B  |                  |
 | 46/2     | seg[0]              | LOCATED    | LVCMOS33_OUT | PL6A  |                  |
@@ -103,6 +104,7 @@ Pinout by Pin Number:
 
 Locate Constraints for each Pin: 
 
+ldc_set_location -site {43} [ get_ports {enable} ]
 ldc_set_location -site {42} [ get_ports {led[0]} ]
 ldc_set_location -site {38} [ get_ports {led[1]} ]
 ldc_set_location -site {28} [ get_ports {led[2]} ]
@@ -125,5 +127,5 @@ ldc_set_location -site {32} [ get_ports {switch[3]} ]
 
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
 
-Mon Sep  7 05:20:11 2026
+Tue Sep  8 01:41:35 2026
 
