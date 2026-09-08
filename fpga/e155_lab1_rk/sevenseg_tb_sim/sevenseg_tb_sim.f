@@ -6,7 +6,6 @@
 "C:/Users/rkong/Documents/GitHub/E155-Lab1/fpga/e155_lab1_rk/source/impl_1/lab1_rk.sv" 
 "C:/Users/rkong/Documents/GitHub/E155-Lab1/fpga/e155_lab1_rk/source/impl_1/counter.sv" 
 "C:/Users/rkong/Documents/GitHub/E155-Lab1/fpga/e155_lab1_rk/source/impl_1/sevenseg.sv" 
-"C:/Users/rkong/Documents/GitHub/E155-Lab1/fpga/e155_lab1_rk/source/impl_1/e155_lab1_rk_tb.sv" 
 "C:/Users/rkong/Documents/GitHub/E155-Lab1/fpga/e155_lab1_rk/source/impl_1/sevenseg_tb.sv" 
 -sv
 -optionset VOPTDEBUG
@@ -25,4 +24,4 @@
 
 -do "view wave"
 -do "add wave /*"
--do "run 200 ns"
+-do "run 260 ns"
