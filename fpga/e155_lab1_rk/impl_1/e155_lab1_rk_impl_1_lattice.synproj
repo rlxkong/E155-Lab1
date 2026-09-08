@@ -43,8 +43,9 @@
 -sver "../source/impl_1/lab1_rk.sv"
 -sver "../source/impl_1/counter.sv"
 -sver "../source/impl_1/sevenseg.sv"
+-sver "../source/impl_1/ai_prototype.sv"
 -path ".."
--top lab1_rk
+-top top
 # Output Configuration
 -udb "e155_lab1_rk_impl_1_rtl.udb"
 -output_hdl "e155_lab1_rk_impl_1.vm"
