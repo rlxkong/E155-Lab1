@@ -1,0 +1,28 @@
+
+---
+title: "E155 Portfolio"
+image: images/headshot.jpg
+about: 
+  template: jolla
+  image: images/headshot.jpg
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/rebecca-kong-b35383304/
+    - icon: github
+      text: Github
+      href: https://github.com/rlxkong
+---
+
+Rebecca Kong is a junior engineering major at [Harvey Mudd College](https://www.hmc.edu/). She is interested in the field of computer engineering, particularly its applications in improving accessibility and user experience. In her free time, she enjoys playing tennis, gaming, and trying new resturants with friends.
+
+## Education
+
+Harvey Mudd College | Claremont, CA
+B.S. in Engineering | Aug 2024 - Ongoing
+
+## Experience
+
+SenseTime | Content Operations Intern | July 2026 - Aug 2026
+
+Entrepeneurship Studio Program | Student Researcher | Jun 2025 - Aug 2025
