@@ -1,5 +1,13 @@
+ //	lab1_rk.sv
+//	Rebecca Kong
+//	rkong@hmc.edu
+//	9/4/2026
+//
+//	The top level module consisting only of instantiated modules and switch-to-LED logic.
+ 
  module lab1_rk(
 	 input   logic       reset,
+	 input   logic       enable,
 	 input   logic [3:0] switch,
      output  logic [2:0] led,
 	 output  logic [6:0] seg
@@ -13,7 +21,7 @@
          hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(int_osc));
 
   // Instantiate counter and seven segments
-  counter counter(int_osc, 1, reset, led[2]);
+  counter counter(int_osc, enable, reset, led[2]);
   sevenseg sevenseg(switch, seg);
   
   // LED switch logic
