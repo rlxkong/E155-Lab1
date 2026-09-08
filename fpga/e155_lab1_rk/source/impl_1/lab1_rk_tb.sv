@@ -1,3 +1,10 @@
+//	lab1_rk_tb.sv
+//	Rebecca Kong
+//	rkong@hmc.edu
+//	9/7/2026
+//
+//	A testbench used to verify that modules are wired together correctly, the HSOSC produces a clock, and that the assign logic works.
+
 `timescale 1 ns/1 ns
 
 module lab1_rk_tb();
@@ -5,7 +12,7 @@ module lab1_rk_tb();
   logic   [3:0]   s;      // 4-bit input switches
   logic   [2:0]   led;    // 3 output leds
   logic   [6:0]   seg;    // 6 output segments
-  logic 		  enable; 
+  logic 		  enable; // active high enable
 
     lab1_rk dut (
         .reset(reset),
@@ -25,7 +32,7 @@ module lab1_rk_tb();
             $display("PASSED! The oscillator behaves as desired at time: %0t.", $time);
         else 
             $error("FAILED! The oscillator behaves incorrectly at time: %0t.", $time); 
-		#6;			//a bit more than half a internal oscillator cycle (the clock would be on high)
+		#6;			//a bit more than half a internal oscillator cycle (the clock would be on high) in addition to the 5ns from earlier.
 		assert (dut.int_osc == 1)       
             $display("PASSED! The oscillator behaves as desired at time: %0t.", $time);
         else 

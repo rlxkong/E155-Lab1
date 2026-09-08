@@ -1,3 +1,10 @@
+//	sevenseg_tb.sv
+//	Rebecca Kong
+//	rkong@hmc.edu
+//	9/6/2026
+//
+//	A testbench used to test all 16 input combinations.
+
 `timescale 1 ns/1 ns
 
 module sevenseg_tb();

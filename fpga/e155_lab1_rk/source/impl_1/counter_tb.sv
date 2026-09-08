@@ -1,10 +1,17 @@
+//	counter_tb.sv
+//	Rebecca Kong
+//	rkong@hmc.edu
+//	9/6/2026
+//
+//	A testbench used to verify the reset, enable, and max count behavior.
+
 `timescale 1 ns/1 ns
 
 module counter_tb();
-  logic           clk;    		// system clock
-  logic           enable;  
-  logic           reset;  		// active high reset
-  logic           led;    		// blinking led
+  logic           clk;    			// system clock
+  logic           enable;  			// active high enable
+  logic           reset;  			// active high reset
+  logic           led;    			// blinking led
   logic           temp_counter; 	// temporary counter 
 
     counter dut (
