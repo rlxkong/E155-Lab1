@@ -1,11 +1,11 @@
-//	counter.sv
+//	lab1_counter_rk.sv
 //	Rebecca Kong
 //	rkong@hmc.edu
 //	9/5/2026
 //
 //	Logic to ensure led[2] blinks at 2.4Hz. Includes a reset, enable, and max count feature.
 
-module counter #(
+module lab1_counter_rk #(
 	parameter maxcount = 10000000, //maximum postitive edges to achieve 2.4 Hz
 	parameter N = 24 //sets bitsize of counter
 ) (

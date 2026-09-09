@@ -1,11 +1,11 @@
-//	sevenseg.sv
+//	lab1_sevenseg_rk.sv
 //	Rebecca Kong
 //	rkong@hmc.edu
 //	9/5/2026
 //
 //	Case statements to select the correct segmenet pattern given corresponding switches for the 7-segment block.
 
-module sevenseg(
+module lab1_sevenseg_rk(
 	input  logic [3:0] switch,
 	output logic [6:0] segments_abc_defg
 );

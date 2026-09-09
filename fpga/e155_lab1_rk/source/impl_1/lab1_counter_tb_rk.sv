@@ -1,4 +1,4 @@
-//	counter_tb.sv
+//	lab1_counter_tb_rk.sv
 //	Rebecca Kong
 //	rkong@hmc.edu
 //	9/6/2026
@@ -7,14 +7,14 @@
 
 `timescale 1 ns/1 ns
 
-module counter_tb();
+module lab1_counter_tb_rk();
   logic           clk;    			// system clock
   logic           enable;  			// active high enable
   logic           reset;  			// active high reset
   logic           led;    			// blinking led
   logic           temp_counter; 	// temporary counter 
 
-    counter dut (
+    lab1_counter_rk dut (
         .clk(clk),
         .reset(reset),
         .enable(enable),

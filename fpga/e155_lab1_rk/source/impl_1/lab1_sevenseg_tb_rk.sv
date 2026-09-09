@@ -1,4 +1,4 @@
-//	sevenseg_tb.sv
+//	lab1_sevenseg_tb_rk.sv
 //	Rebecca Kong
 //	rkong@hmc.edu
 //	9/6/2026
@@ -7,11 +7,11 @@
 
 `timescale 1 ns/1 ns
 
-module sevenseg_tb();
+module lab1_sevenseg_tb_rk();
   logic   [3:0]   s; 	  // 4-bit input switches
   logic   [6:0]   seg;    // 6 output segments
 
-    sevenseg dut (
+    lab1_sevenseg_rk dut (
         .switch(s),
         .segments_abc_defg(seg)
     );

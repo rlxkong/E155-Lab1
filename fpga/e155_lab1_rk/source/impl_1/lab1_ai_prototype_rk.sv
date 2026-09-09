@@ -1,3 +1,10 @@
+//	lab1_ai_prototype_rk.sv
+//	Rebecca Kong
+//	rkong@hmc.edu
+//	9/8/2026
+//
+//	AI written 2.4 Hz blinker logic.
+
 module top (
     output logic led
 );
