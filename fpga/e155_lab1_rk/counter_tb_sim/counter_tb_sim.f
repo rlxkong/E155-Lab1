@@ -24,4 +24,4 @@
 
 -do "view wave"
 -do "add wave /*"
--do "run 1 sec"
+-do "run -all"

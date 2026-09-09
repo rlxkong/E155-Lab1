@@ -66,7 +66,14 @@ module lab1_rk_tb();
         else 
             $error("FAILED! The reset behaves incorrectly at time: %0t.", $time);
 		reset = 1;
-		#20;			
+		#20;		
+		
+	// led[2] turns on so it shows that the led responds to HSOSC which means the submodule is connected
+		#300000000;  	// 20ns per cycle x 10000000 (maxcount) for time it takes to reach maxcount
+		assert ((led[2] == 1))
+            $display("PASSED! The led behaves as desired at time: %0t.", $time);
+        else 
+            $error("FAILED! The led behaves incorrectly at time: %0t.", $time); 
 
 	// LED combinational logic
     // testing for led[0] -- XOR
