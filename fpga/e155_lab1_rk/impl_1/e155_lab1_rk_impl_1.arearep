@@ -1,12 +1,10 @@
 ----------------------------------------------------------------------
-Report for cell top.TECH
-Register bits:  24 of 5280 (0.455%)
-I/O cells:      1
+Report for cell lab1_sevenseg_rk.TECH
+Register bits:  0 of 5280 (0.000%)
+I/O cells:      11
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               CCU2        12          100.0
-                            FD1P3XZ        24          100.0
-                         HSOSC_CORE         1          100.0
-                               LUT4         9          100.0
-                                 OB         1          100.0
-                              TOTAL        47
+                                 IB         4          100.0
+                               LUT4         7          100.0
+                                 OB         7          100.0
+                              TOTAL        18

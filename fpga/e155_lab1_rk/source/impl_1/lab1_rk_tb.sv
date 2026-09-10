@@ -46,14 +46,14 @@ module lab1_rk_tb();
 		#21;
 		enable = 0;								// set enable to 0 should freeze the code
         #200;                       			
-        assert (dut.counter.count == 0)    
+        assert (dut.lab1_counter_rk.count == 0)    
             $display("PASSED! The enable behaves as desired at time: %0t.", $time);
         else 
             $error("FAILED! The enable behaves incorrectly at time: %0t.", $time);
 		
 		enable = 1;
 		#200;			// wait for enable to occur (counter goes to 0)
-		assert (dut.counter.count != 0)    
+		assert (dut.lab1_counter_rk.count != 0)    
             $display("PASSED! The enable behaves as desired at time: %0t.", $time);
         else 
             $error("FAILED! The enable behaves incorrectly at time: %0t.", $time); 
@@ -61,7 +61,7 @@ module lab1_rk_tb();
 	// reset verification 
 		reset = 0;
 		#20;			// reset all initial values to 0
-		assert ((dut.counter.count == 0) & (led[2] == 0))  
+		assert ((dut.lab1_counter_rk.count == 0) & (led[2] == 0))  
             $display("PASSED! The reset behaves as desired at time: %0t.", $time);
         else 
             $error("FAILED! The reset behaves incorrectly at time: %0t.", $time);

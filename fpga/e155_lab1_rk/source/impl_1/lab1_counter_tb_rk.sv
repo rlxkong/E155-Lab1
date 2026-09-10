@@ -60,7 +60,7 @@ module lab1_counter_tb_rk();
 		#20;			// wait a cycle for reset to occur
 		
 	// maxcount verification
-		#200000000;  	// 20ns per cycle x 10000000 (maxcount) for time it takes to reach maxcount
+		#199999980;  	// 20ns per cycle x 10000000 - 1 (maxcount) for time it takes to reach maxcount
 		assert (dut.count == 0)
             $display("PASSED! The maxcounter condition behaves as desired at time: %0t.", $time);
         else 

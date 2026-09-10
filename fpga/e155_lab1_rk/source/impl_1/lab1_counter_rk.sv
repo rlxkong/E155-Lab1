@@ -17,13 +17,13 @@ module lab1_counter_rk #(
 	
    // Counter
    always_ff @(posedge clk) begin
-     if      (reset == 0) begin			// when reset == 0 it resets
+     if      (reset == 0) begin				// when reset == 0 it resets
 		 count <= 0;
 		 switch_led <= 0;
 		 end
-	 else if (enable) begin				// only runs when enable == 1
-		if (count == maxcount) begin	// blinks the light and resets the count at the end of a cycle
-			switch_led <= ~switch_led;
+	 else if (enable) begin					// only runs when enable == 1
+		if (count == maxcount - 1) begin	// blinks the light and resets the count at the end of a cycle
+			switch_led <= ~switch_led;		// account for time it takes to perform this task
 			count <= 0;
 			end
 		else 
