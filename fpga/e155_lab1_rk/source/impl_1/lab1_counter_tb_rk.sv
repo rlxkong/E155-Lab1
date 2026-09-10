@@ -12,7 +12,7 @@ module lab1_counter_tb_rk();
   logic           enable;  			// active high enable
   logic           reset;  			// active high reset
   logic           led;    			// blinking led
-  logic           temp_counter; 	// temporary counter 
+  logic           temp_counter; 	// temporary counter
 
     lab1_counter_rk dut (
         .clk(clk),
@@ -51,7 +51,7 @@ module lab1_counter_tb_rk();
 			
 	// reset verification 
 		reset = 0;
-		#20;			// reset all initial values to 0
+		#200;			// reset all initial values to 0
 		assert ((dut.count == 0) & (led == 0))  
             $display("PASSED! The reset behaves as desired at time: %0t.", $time);
         else 
