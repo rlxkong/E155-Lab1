@@ -1,8 +1,8 @@
 <RadiantSimulationProject language="1" name="counter_tb_sim" path="." simType="QuestaSim Qrun" stage="0" version="2.0">
     <Source include="none" langstandard="System Verilog" path="source/impl_1/lab1_rk.sv" type="VERILOG" worklib="work"/>
-    <Source include="none" langstandard="System Verilog" path="source/impl_1/lab1_ai_prototype_rk.sv" type="VERILOG" worklib="work"/>
-    <Source include="none" langstandard="System Verilog" path="source/impl_1/lab1_counter_rk.sv" type="VERILOG" worklib="work"/>
     <Source include="none" langstandard="System Verilog" path="source/impl_1/lab1_sevenseg_rk.sv" type="VERILOG" worklib="work"/>
+    <Source include="none" langstandard="System Verilog" path="source/impl_1/lab1_counter_rk.sv" type="VERILOG" worklib="work"/>
+    <Source include="none" langstandard="System Verilog" path="source/impl_1/lab1_ai_prototype_rk.sv" type="VERILOG" worklib="work"/>
     <Source include="none" langstandard="" path="source/impl_1/lab1_counter_tb_rk.sv" type="VERILOG" worklib=""/>
     <SimLib value="pmi_work ovi_ice40up"/>
     <GlbInc value=""/>

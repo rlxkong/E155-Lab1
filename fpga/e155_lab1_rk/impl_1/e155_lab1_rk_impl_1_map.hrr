@@ -1,8 +1,10 @@
 ---------------------------------------------------
-Report for cell lab1_sevenseg_rk
-   Instance path: lab1_sevenseg_rk
+Report for cell top
+   Instance path: top
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	          7        100.0
-                               LUTGATE	          7        100.0
-                                 IOBUF	         11        100.0
+                                  LUT4	         34        100.0
+                               LUTGATE	         10        100.0
+                                LUTCCU	         24        100.0
+                                 IOBUF	          1        100.0
+                                PFUREG	         24        100.0

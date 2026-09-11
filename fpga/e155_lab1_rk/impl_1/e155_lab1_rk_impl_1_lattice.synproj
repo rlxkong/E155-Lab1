@@ -41,9 +41,9 @@
 
 # Source Files
 -sver "../source/impl_1/lab1_rk.sv"
--sver "../source/impl_1/lab1_ai_prototype_rk.sv"
--sver "../source/impl_1/lab1_counter_rk.sv"
 -sver "../source/impl_1/lab1_sevenseg_rk.sv"
+-sver "../source/impl_1/lab1_counter_rk.sv"
+-sver "../source/impl_1/lab1_ai_prototype_rk.sv"
 -path ".."
 -top top
 # Output Configuration
