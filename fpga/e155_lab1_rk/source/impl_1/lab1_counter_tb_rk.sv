@@ -49,6 +49,15 @@ module lab1_counter_tb_rk();
         else 
             $error("FAILED! The enable behaves incorrectly at time: %0t.", $time); 
 			
+		enable = 0;
+		#200; 			// check that count freezes when enable is low
+		assert (dut.count != 0)    
+            $display("PASSED! The enable behaves as desired at time: %0t.", $time);
+        else 
+            $error("FAILED! The enable behaves incorrectly at time: %0t.", $time); 
+			
+		enable = 1;
+			
 	// reset verification 
 		reset = 0;
 		#200;			// reset all initial values to 0
@@ -58,6 +67,7 @@ module lab1_counter_tb_rk();
             $error("FAILED! The reset behaves incorrectly at time: %0t.", $time);
 		reset = 1;
 		#20;			// wait a cycle for reset to occur
+		
 		
 	// maxcount verification
 		#199999980;  	// 20ns per cycle x 10000000 - 1 (maxcount) for time it takes to reach maxcount
