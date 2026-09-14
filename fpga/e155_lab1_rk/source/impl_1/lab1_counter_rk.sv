@@ -10,9 +10,10 @@ module lab1_counter_rk #(
 	parameter N = 24 //sets bitsize of counter
 ) (
 	input logic clk, enable, reset,
-	output logic led
+	output logic led, 
+	output logic [N-1:0] count
 );
-	logic [N-1:0] count;
+
 	logic switch_led;
 	
    // Counter
